@@ -56,3 +56,6 @@ But the returned value is off by .9 my expected value so lets work through it ag
 Here it seems like my assumption was, as it states in the book that the operations of equal precedence are carried left to right.
 In this case it would seem that assumption is wrong, and that to attain a value of 2, (an integer nonetheless), we divide right to left.
     x / i / z             = 10.0 / (10 / 0.5)             = INTEGER :: 2
+Second Pass: Turns out I simply forgot the property that dividing by a sub 1, rational value, is a multiplication. (x / .5) == (x * 2)
+My original revision ends up being 10.0 / 20.0 which is not the correct result. 
+    x / i / z             = (10.0 / 10) / 0.5             = INTEGER :: 2
