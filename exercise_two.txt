@@ -1,0 +1,14 @@
+Which of the following are invalid names in Fortran 90 and why?
+
+abignumber 
+thedate 
+A_HUGE_NUMBER
+Time.minutes - Invalid because variable names can't contain '.' character
+10times - Invalid because variable names can't begin with a number
+Program
+1066 - Invalid because variable names can't begin with a number
+X 
+HELP! - Invalid because variable names can't contain '!' character
+f[t] - Invalid because variable names can't contain brackets
+no way - Invalid because variable names can't contain a space
+another-number - Invalid because variable names can't contain '`' character

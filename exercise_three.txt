@@ -1,0 +1,58 @@
+Given the following variable declarations and assignments evaluate the subsequent
+expressions and state the value and type of each result. Check your
+results by writing a program to write out the results of the expressions. Finally,
+insert brackets to clarify the meaning of these expressions according to operator
+precedence.
+
+REAL :: x=10.0 y=0.01, z=0.5
+INTEGER :: i=10, j=25, k=3
+i + j + k * i
+z * x / 10 + k
+z * k + z * j + z * i
+i * y - k / x + j
+x / i / z
+
+-----
+
+From the Book
+"""
+In expressions
+which contain more than one operator the operations are carried out (working
+from the left to right in the expression) in an order which is determined by the operator
+precedence.
+
+Operators are evaluated in the following order:
+• Bracketed expressions, (...).
+• Exponentiation, **.
+• Multiplication and/or division, * or /.
+• Addition and/or subtraction, + or -.
+"""
+
+REAL :: x=10.0 y=0.01, z=0.5
+INTEGER :: i=10, j=25, k=3
+i + j + k * i         = 10 + 25 + 3 * 10              = INTEGER :: 65
+z * x / 10 + k        = 0.5 * 10.0 / 10 + 3           = REAL    :: 3.5
+z * k + z * j + z * i = 0.5 * 3 + 0.5 * 25 + 0.5 * 10 = INTEGER :: 19
+i * y - k / x + j     = 10 * 0.01 - 3 / 10.0 + 25     = REAL    :: 25.7
+x / i / z             = 10.0 / 10 / 0.5               = REAL    :: 0.5
+
+-----
+Actual First Output
+
+          65  - Correct
+   3.50000000 - Correct
+          19  - Correct
+   24.7999992 - Incorrect
+   2.00000000 - Incorrect
+
+-----
+Revise
+
+In this case I think I originally misread 0.01 as 0.1, it doesn't make sense to me that it would affect the answer in the way it seems.
+But the returned value is off by .9 my expected value so lets work through it again.
+    i * y - k / x + j     = (10 * 0.01) - (3 / 10.0) + 25 = REAL    :: 25.7
+                            (.1 - .3) + 25 = 25 - .2 = 24.8
+
+Here it seems like my assumption was, as it states in the book that the operations of equal precedence are carried left to right.
+In this case it would seem that assumption is wrong, and that to attain a value of 2, (an integer nonetheless), we divide right to left.
+    x / i / z             = 10.0 / (10 / 0.5)             = INTEGER :: 2
