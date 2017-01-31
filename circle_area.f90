@@ -11,6 +11,6 @@ PROGRAM circle_area
       WRITE (*,*) 'Please type the value for the radius:'
       READ (5,*) radius
       area = pi*radius*radius ! calculate the area
-      WRITE (6,*) area
+      WRITE (*,*) 'The area of a circle of radius ', radius, ' is ', area
 
 END PROGRAM circle_area
