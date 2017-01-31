@@ -1,0 +1,10 @@
+Given the following variable declaration and initialization:
+   CHARACTER(len=27) :: title=‘An Introduction to Fortran.’
+define substrings which would specify the character literals below? 
+(a) to
+(b) Intro
+(c) Fortran.
+
+(a) = title(17:18)
+(b) = title(4:8)
+(c) = title(20:)

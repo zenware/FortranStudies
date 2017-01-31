@@ -1,0 +1,12 @@
+Given the following variable declaration and initialization:
+   CHARACTER(len=5) :: vowels=‘aeiou‘
+what are the substrings specified below? 
+(a) vowels(1:1)
+(b) vowels(:2)
+(c) vowels(4:)
+(d) vowels(2:4)
+
+(a) = 'a'
+(b) = 'ae'
+(c) = 'ou'
+(d) = 'eio'
