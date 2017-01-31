@@ -4,6 +4,9 @@ PROGRAM ex6
     INTEGER :: one, two, three, four, five, five_sum
     REAL :: five_avg
 
+    WRITE (*,*) 'Computes the sum and average of five integers.'
+
+    WRITE (*,*) 'Input five integers:'
     READ (*,*) one, two, three, four, five
     five_sum = one+ two+ three+ four+ five
     five_avg = five_sum / 5

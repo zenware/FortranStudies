@@ -8,6 +8,9 @@ PROGRAM ex5
 
     TYPE(rectangle) :: my_rectangle
 
+    WRITE (*,*) "Calculates the length of a rectangle based on it's length and breadth."
+
+    WRITE (*,*) 'Input the length and breadth of a rectangle:'
     READ (*,*) my_rectangle%length, my_rectangle%breadth
 
     my_rectangle%area = my_rectangle%length * my_rectangle%breadth

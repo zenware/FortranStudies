@@ -2,6 +2,9 @@ PROGRAM ex_three
     REAL :: x=10.0, y=0.01, z=0.5, two, four
     INTEGER :: i=10, j=25, k=3, one, three, five
 
+    WRITE (*,*) 'This program outputs the results of five calculations.'
+    WRITE (*,*) 'It is intended as order of operation practice.'
+
     one = i + j + (k * i)!           = 10 + 25 + 3 * 10              = INTEGER :: 65
     two = ((z * x) / 10) + k!          = 0.5 * 10.0 / 10 + 3           = REAL    :: 3.5
     three = (z * k) + (z * j) + (z * i)! = 0.5 * 3 + 0.5 * 25 + 0.5 * 10 = INTEGER :: 19
