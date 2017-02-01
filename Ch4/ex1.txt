@@ -1,0 +1,9 @@
+!1. Given the values below, what is the value of each of the following expressions? Write a program to test your answers.
+INTEGER :: age=34, old=92, young=16
+age /= old                      ! 34 /= 92 ; .true.
+age >= young                    ! 34 >= 16 ; .true.
+age = 62                        ! This is an assignment operation, age has a new value.
+(age==56 .AND. old/=92)         ! (62==56 .AND. 92/=92) ; (.false. .and. .false.) ; .false.
+(age==56 .OR. old/=92)          ! (62==56 .OR. 92/=92) ; (.false. .or. .false.) ; .false.
+(age==56 .OR. (.NOT.(old/=92))) ! (62==56 .OR. (.NOT.(92/=92))) ; (.false. .or. (.not.(.false.))) ; (.false. .or. .true.) ; .true.
+.NOT. (age==56 .OR. old/=92)    ! .NOT. (62==56 .OR. 92/=92) ; .not. (.false. .or. .false.) ; .true.
