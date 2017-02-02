@@ -1,0 +1,6 @@
+3. Simplify the following expressions using different logical operators:
+.NOT. (a<b .AND. b<c)
+.NOT. (a<b .EQV. x<y)
+
+(a<b .NEQV. b<c)
+(a<b .NEQV. x<y)
