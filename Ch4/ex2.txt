@@ -1,0 +1,6 @@
+2. What are the logical values of the following expressions?
+15 > 23                            ! .false.
+(12+3) <= 15                       ! .true.
+(2>1) .AND. (3<4)                  ! .true. .and .true ; .true.
+((3>2) .AND. (1+2)<3) .OR. (4<=3)  ! (.true. .and. .false.) .or. .false. ; .false. .or. .false. ; .false.
+((3>2) .AND. (1+2)<3) .EQV. (4<=3) ! (.true. .and. .false.) .equ. .false. ; .false. .eqv. .false. ; .true.
