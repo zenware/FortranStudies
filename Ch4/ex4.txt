@@ -1,0 +1,42 @@
+!Determine the logical value of each of the following expressions. Write a pro-
+!gram to test your answers.
+CHARACTER(LEN=4) :: name = ’Adam’
+
+name > ’Eve’              ! .false.
+“ADAM” > name             ! .true.
+’M1’ < ’M25’              ! .true.
+’version_1’ > ’version-2’ ! .true.
+’ more’ < ’more’          ! .true.
+
+!Here's what the book says about these intrinsic string comparison functions
+!LGT(string1, string2) !greater than or equal to 
+!LGE(string1, string2) !greater than
+!LLE(string1, string2) !less than or equal to 
+!LLT(string1, string2) !less than
+
+LGT("Adam","adam")        ! .true.
+LLT("Me",’me’)            ! .false.
+LLT(’me’,"me?")           ! .true.
+
+The results from first running the program were not what I expected.
+ Expecting .false.
+ F
+ Expecting .true. "ADAM" > name == .false.
+    Because ASCII 'A' is < than 'a'?
+    I think they are '65' and '97'or 01000001 and 01100001 
+    ... *sigh* yep, that was a silly mistake and may be the root of my other mistakes
+    I'm going to fix it and test again as it might just resolve all the errors.
+    Yeah, that did the trick.
+ F
+ Expecting .true.
+ T
+ Expecting .true.
+ T
+ Expecting .true.
+ T
+ Expecting .true.
+ F
+ Expecting .false.
+ T
+ Expecting .true.
+ T
